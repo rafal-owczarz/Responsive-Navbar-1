@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  font-family: 'Lato', sans-serif;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  transition: color .3s;
+
+  &:hover {
+    color: #007acc;
+  }
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+
+  &__title {
+    margin: .5rem;
+    font-size: 1.5rem;
+  }
+
+  &__toggle {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+
+    &-bar {
+      width: 100%;
+      height: 3px;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    &-item {
+      list-style: none;
+      transition: background-color .3s;
+
+      &:hover {
+        background-color: #3e3e42;
+      }
+    }
+
+    &-link {
+      display: block;
+      padding: 1rem;
+    }
+  }
+}
+
+@import 'media';
